@@ -1,18 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
-<html manifest="cloudedit.appcache">
-<!--<html>-->
+<HTML expr:dir='data:blog.languageDirection'>
+<head>
 <meta charset='utf-8'/>
 <meta content='width=device-width, initial-scale=1' name='viewport'/>
 <title>HTML LIVE EDITOR BY SlideSeo</title>
 <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
 <meta content='blogger' name='generator'/>
-<link href='http://slideseo.blogspot.co.id/favicon.ico' rel='icon' type='image/x-icon'/>
+<link href='http://slideseo.blogspot.com/favicon.ico' rel='icon' type='image/x-icon'/>
 <meta content='slideseo,slide seo,slide seo blog' name='keywords'/>
 <meta content='Monseur.RmS' name='Author'/>
 <link href='https://www.facebook.com/declined.payment' rel='author'/>
 <meta content='Tutorial Dan Cara blogging untuk pemula,tips SEO,desain blog,download template SEO Friendly gratis,cara membuat blog keren,google adsense,' name='description'/>
 <meta content='slideseo,slide seo,slide seo blog' name='keywords'/>
-<link href='https://slideseo.blogspot.co.id/' rel='canonical'/>
+<link href='http://slideseo.blogspot.co.id/' rel='canonical'/>
 <link href='https://plus.google.com/108383348633561410942/posts' rel='publisher'/>
 <link href='https://plus.google.com/108383348633561410942/about' rel='author'/>
 <link href='https://plus.google.com/108383348633561410942' rel='me'/>
@@ -34,35 +35,37 @@
 <meta content='100002602820708' property='fb:admins'/>
 <meta content='@Rms_Ghost' name='twitter:site'/>
 <meta content='@Rms_Ghost' name='twitter:creator'/>
-<meta content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1' name='viewport'/>
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" />
-  <title>CloudEdit: HTML Live Editor</title>
-  <link href="css/cloudEdit.min.css" rel="stylesheet">
-  <link href="css/contextMenu.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="editor-min.css"/>
+  <link rel="stylesheet" type="text/css" href="editor-menu.css"/>
+  <script type='text/javascript'>
+//<![CDATA[
+function loadCSS(e, t, n) { "use strict"; var i = window.document.createElement("link"); var o = t || window.document.getElementsByTagName("script")[0]; i.rel = "stylesheet"; i.href = e; i.media = "only x"; o.parentNode.insertBefore(i, o); setTimeout(function () { i.media = n || "all" }) }
+loadCSS("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");loadCSS("https://fonts.googleapis.com/css?family=Roboto:400,300,700,300italic,500,500italic");
+//]]>
+</script>
 </head>
-
 <body>
-  <section>
+<section>
     <div class="row btnGroup">
-      <div class="column-33 toggleGroup">
-        <button class="btn togglePane" id="htmlToggle" data-editor="html" title="Toggle HTML">HTML</button>
-        <button class="btn togglePane" id="cssToggle" data-editor="css" title="Toggle CSS">CSS</button>
-        <button class="btn togglePane" id="jsToggle" data-editor="js" title="Toggle JS">JavaScript</button>
-        <button class="btn" id="consoleToggle" title="Toggle JavaScript Console">Console</button>
-        <button class="btn btn-active" id="liveEdit" title="Toggle Live Edit Mode">LiveEdit</button>
+      <div class="column-33 toggleGroup" style='margin-top:15px;'>
+        <button class="btn togglePane tombol bulat tooltip" id="htmlToggle" data-editor="html" title="Toggle HTML">HTML <i class='fa fa-toggle-on'></i></button>
+        <button class="btn togglePane tombol bulat tooltip" id="cssToggle" data-editor="css" title="Toggle CSS">CSS <i class='fa fa-toggle-on'></i></button>
+        <button class="btn togglePane tombol bulat tooltip" id="jsToggle" data-editor="js" title="Toggle JS">JavaScript <i class='fa fa-toggle-on'></i></button>
+        <button class="btn bulat tooltip" id="consoleToggle" title="Toggle JavaScript Console" style="display:none;">Console <i class='fa fa-toggle-on'></i></button>
+        <Br/>
       </div><!--
       --><div class="column-33">
-        <h1>CloudEdit: HTML Live Editor</h1>
-      </div><!--
+       <h1 style="font-weight:900!important;color:#2d2d2d;margin-top:5px;"><img src='https://slideseo.blogspot.com/favicon.ico' alt='favicon' style="opacity:.9" /> HTML Live Editor By SlideSeo </h1>
+        <center style="margin-top:5px;display:block;font-size:16px; color:#6d6d6d;">http://slideseo.blogspot.co.id</center>
+     </div><!--
       --><div class="column-33 btnGroup last">
-        <button class="btn" id="previewToggle" title="Enlarge Preview">Preview</button>
-        <button class="btn" id="clear" title="Click to clear all panes">Clear</button>
-        <button class="btn" id="download" title="Download to computer">Download</button>
-        <button class="btn" id="save" title="Save to localStorage">Save</button>
-        <button class="btn" id="load" title="Load from localStorage">Load</button>
-        <button class="btn" id="run" title="Run...">Run</button>
+        <button class="btn tombol kecil bulat tooltip" id="previewToggle" title="Enlarge Preview">Preview</button>
+        <button class="btn tombol kecil bulat tooltip" id="clear" title="Click to clear all panes">Clear</button> <span style='opacity:.3;'>/</span>
+        <button class="btn tombol kecil bulat tooltip" id="download" title="Download to computer">Download</button> <span style='opacity:.3;'>/</span>
+        <button class="btn tombol kecil bulat tooltip" id="save" title="Save to localStorage">Save</button>
+        <button class="btn tombol kecil bulat tooltip" id="load" title="Load from localStorage">Load</button><br/>
+        <button class="btn tombol bulat tooltip" id="run" title="Run..." style='padding-left:50px;padding-right:50px;'>Run</button>
+        <button class="btn tombol bulat btn-active tooltip" id="liveEdit" title="Toggle Live Edit Mode" style='padding-left:50px;padding-right:50px;'>LiveEdit <i class='fa fa-toggle-off'></i></button>
       </div>
     </div>
     <div class="row windowGroup">
@@ -85,27 +88,52 @@
         </div>
       </div>
     </div>
-    <div class="row console">
+    <div class="row console" style="display:none;">
       <pre id="console"></pre>
       <span class="windowLabel" id="consoleLabel">Console</span>
     </div>
-    <div class="row preview">
-      <iframe id="iframe" name="CloudEdit"
-        sandbox="allow-scripts allow-pointer-lock allow-same-origin allow-popups allow-forms"
-        allowtransparency="true">
-      </iframe>
-      <span class="windowLabel" id="iframeLabel">Preview</span>
-      <span id="iframeClose">x</span>
+    <div class='minheight'>
+    <div class='responsiveBtn'>
+    <h2 style="display:inline-block;"><i class='fa fa-laptop' style='vertical-align:middle;font-size:30px;'></i> Responsive Web-Design? </h2>
+      <button id='b1280' class='tombol bulat'>1280</button>
+      <button id='b1024' class='tombol bulat'>1024</button>
+      <button id='b960' class='tombol bulat'>960</button>
+      <button id='b800' class='tombol bulat'>800</button>
+      <button id='b768' class='tombol bulat'>768</button>
+      <button id='b720' class='tombol bulat'>720</button>
+      <button id='b640' class='tombol bulat'>640</button>
+      <button id='b480' class='tombol bulat'>480</button>
+      <button id='b360' class='tombol bulat'>360</button>
+      <button id='b320' class='tombol bulat'>320</button>
     </div>
-  </section>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script src="js/ace/ace.js" type="text/javascript" charset="utf-8"></script>
-  <script src="js/ace/ext-emmet.js" type="text/javascript" charset="utf-8"></script>
-  <script src="js/ace/emmet.js" type="text/javascript" charset="utf-8"></script>
-  <script src="js/jquery.ui.position.min.js" type="text/javascript" charset="utf-8"></script>
-  <script src="js/contextMenu.min.js" type="text/javascript" charset="utf-8"></script>
-  <script src="js/jqconsole.min.js" type="text/javascript" charset="utf-8"></script>
-  <script src="js/cloudEdit.min.js" type="text/javascript" charset="utf-8"></script>
-</body>
+      <div class="row preview" id="resize" style='background:#fff;'>
+        <iframe id="iframe" name="CloudEdit"
+          sandbox="allow-scripts allow-pointer-lock allow-same-origin allow-popups allow-forms"
+          allowtransparency="true">
+        </iframe>
+        <span class="windowLabel" id="iframeLabel">Preview</span>
+        <span id="iframeClose">&#215;</span>
+      </div>
+    </div>
+    <footer style='font-size:70%;margin:20px 20px 0;'>&#169;2015 - 2016 <b>SlideSeo Live HTML Editor</b> | Created with <i class="fa fa-heart"></i> by : <a href='https://github.com/TheInsomniac' target='_blank' style='color:#1d1d1d;font-weight:bold;text-decoration:none;' class="tooltip" title='https://github.com/TheInsomniac'>TheInsomniac</a> | Developed by : <a style='color:#1d1d1d;font-weight:bold;text-decoration:none;' title='http://kangrian.com' class='clickProfile tooltip' href='http://kangrian.com' >Kang Rian</a> | And Publisher With <i class="fa fa-heart"></i> by : <a style='color:#1d1d1d;font-weight:bold;text-decoration:none;' title='http://slideseo.blogspot.co.id' class='clickProfile tooltip' href='http://slideseo.blogspot.com' >Slide Seo</a> & <a style='color:#1d1d1d;font-weight:bold;text-decoration:none;' title='https://mastamvan.blogspot.com' class='clickProfile tooltip' href='https://mastamvan.blogspot.com' >Blog Mas Tamvan</a>
 
-</html>
+    <span class='share'>Share this! on <a class='facebook' href='https://www.facebook.com/sharer/sharer.php?u=http://slideseo.blogspot.co.id/' target='_blank'><i class='fa fa-facebook-official'></i></a> <a class='twitter' href='https://twitter.com/intent/tweet?text=HTML Live Editor - SlideSeo!&amp;url=http://slideseo.blogspot.co.id/' target='_blank'><i class='fa fa-twitter'></i></a> <a class='gplus' href='https://plus.google.com/share?url=http://slideseo.blogspot.co.id/' target='_blank'><i class='fa fa-google-plus'></i></a></span></footer>
+
+  </section>
+  <div id='notif' style='display:none;'>
+  <h1><i class='fa fa-user-secret'></i><br/>SORRY!</h1>
+  <p>This Editor, only available on 960px screen width or more..</p>
+  <p><i class='fa fa-code'></i>
+  </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="https://rawgit.com/TheInsomniac/CloudEdit/master/js/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://rawgit.com/TheInsomniac/CloudEdit/master/js/ace/ext-emmet.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://rawgit.com/TheInsomniac/CloudEdit/master/js/ace/emmet.js" type="text/javascript" charset="utf-8"></script>
+  <script src="jquery.ui.position.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="contextMenu.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="jqconsole.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="cloudEdit.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="slideseo.min.js" type="text/javascript" charset="utf-8"></script>
+  
+</body>
+</HTML>
