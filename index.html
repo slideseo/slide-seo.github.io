@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html manifest="cloudedit.appcache">
+<!--<html>-->
+<meta charset='utf-8'/>
+<meta content='width=device-width, initial-scale=1' name='viewport'/>
+<title>HTML LIVE EDITOR BY SlideSeo</title>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+<meta content='blogger' name='generator'/>
+<link href='http://slideseo.blogspot.co.id/favicon.ico' rel='icon' type='image/x-icon'/>
+<meta content='slideseo,slide seo,slide seo blog' name='keywords'/>
+<meta content='Monseur.RmS' name='Author'/>
+<link href='https://www.facebook.com/declined.payment' rel='author'/>
+<meta content='Tutorial Dan Cara blogging untuk pemula,tips SEO,desain blog,download template SEO Friendly gratis,cara membuat blog keren,google adsense,' name='description'/>
+<meta content='slideseo,slide seo,slide seo blog' name='keywords'/>
+<link href='https://slideseo.blogspot.co.id/' rel='canonical'/>
+<link href='https://plus.google.com/108383348633561410942/posts' rel='publisher'/>
+<link href='https://plus.google.com/108383348633561410942/about' rel='author'/>
+<link href='https://plus.google.com/108383348633561410942' rel='me'/>
+<meta content='LASJea2VachmzdetwHIX74tMzM9emTACSJirGjLgBQo' name='google-site-verification'/>
+<meta content='tmrVmxW6FUMPrHcu3XSGZp48fyGVxD_76ESQoJjEshw' name='google-site-verification'/>
+<meta content='xHn3dlroBne0lQYJM-kRXX1LELpS9alYjv9qGIirO0g' name='google-site-verification'/>
+<meta content='BING-WEBMASTER-CODE' name='msvalidate.01'/>
+<meta content='ALEXA-VERIFY-CODE' name='alexaVerifyID'/>
+<meta content='Medan' name='geo.placename'/>
+<meta content='Monseur RmS/Martin S/Ruhut Martinus Situmorang' name='Author'/>
+<meta content='general' name='rating'/>
+<meta content='Indonesia' name='geo.country'/>
+<meta content='en_US' property='og:locale'/>
+<meta content='en_GB' property='og:locale:alternate'/>
+<meta content='indonesia' name='language'/>
+<meta content='https://www.facebook.com/declined.payment' property='article:author'/>
+<meta content='https://www.facebook.com/declined.payment' property='article:publisher'/>
+<meta content='616605921850933' property='fb:app_id'/>
+<meta content='100002602820708' property='fb:admins'/>
+<meta content='@Rms_Ghost' name='twitter:site'/>
+<meta content='@Rms_Ghost' name='twitter:creator'/>
+<meta content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1' name='viewport'/>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" />
+  <title>CloudEdit: HTML Live Editor</title>
+  <link href="css/cloudEdit.min.css" rel="stylesheet">
+  <link href="css/contextMenu.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <section>
+    <div class="row btnGroup">
+      <div class="column-33 toggleGroup">
+        <button class="btn togglePane" id="htmlToggle" data-editor="html" title="Toggle HTML">HTML</button>
+        <button class="btn togglePane" id="cssToggle" data-editor="css" title="Toggle CSS">CSS</button>
+        <button class="btn togglePane" id="jsToggle" data-editor="js" title="Toggle JS">JavaScript</button>
+        <button class="btn" id="consoleToggle" title="Toggle JavaScript Console">Console</button>
+        <button class="btn btn-active" id="liveEdit" title="Toggle Live Edit Mode">LiveEdit</button>
+      </div><!--
+      --><div class="column-33">
+        <h1>CloudEdit: HTML Live Editor</h1>
+      </div><!--
+      --><div class="column-33 btnGroup last">
+        <button class="btn" id="previewToggle" title="Enlarge Preview">Preview</button>
+        <button class="btn" id="clear" title="Click to clear all panes">Clear</button>
+        <button class="btn" id="download" title="Download to computer">Download</button>
+        <button class="btn" id="save" title="Save to localStorage">Save</button>
+        <button class="btn" id="load" title="Load from localStorage">Load</button>
+        <button class="btn" id="run" title="Run...">Run</button>
+      </div>
+    </div>
+    <div class="row windowGroup">
+      <div class="column-33">
+        <div class="window html">
+          <pre id="html"></pre>
+          <span class="windowLabel" id="htmlLabel">HTML</span>
+        </div>
+      </div><!--
+      --><div class="column-33">
+        <div class="window css">
+          <pre id="css"></pre>
+          <span class="windowLabel" id="cssLabel">CSS</span>
+        </div>
+      </div><!--
+      --><div class="column-33">
+        <div class="window js">
+          <pre id="js"></pre>
+          <span class="windowLabel" id="jsLabel">JavaScript/jQuery 1.x</span>
+        </div>
+      </div>
+    </div>
+    <div class="row console">
+      <pre id="console"></pre>
+      <span class="windowLabel" id="consoleLabel">Console</span>
+    </div>
+    <div class="row preview">
+      <iframe id="iframe" name="CloudEdit"
+        sandbox="allow-scripts allow-pointer-lock allow-same-origin allow-popups allow-forms"
+        allowtransparency="true">
+      </iframe>
+      <span class="windowLabel" id="iframeLabel">Preview</span>
+      <span id="iframeClose">x</span>
+    </div>
+  </section>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="js/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/ace/ext-emmet.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/ace/emmet.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/jquery.ui.position.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/contextMenu.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/jqconsole.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/cloudEdit.min.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>
